@@ -25,6 +25,15 @@ public class ProductController {
      }
 
 
+     @GetMapping("viewAllProducts")
+     public ResponseEntity<List<Product>>getAllProducts(){
+        List<Product>products=productService.getAllProducts();
+         if (products.isEmpty()) { // Check if list is empty
+             return new ResponseEntity<>(HttpStatus.NO_CONTENT); // Return 204 if no products
+         } else {
+             return new ResponseEntity<>(products, HttpStatus.OK); // Return 200 with products
+         }
+    }
 
 
 
