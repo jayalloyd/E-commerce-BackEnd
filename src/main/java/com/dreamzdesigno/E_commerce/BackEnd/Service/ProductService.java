@@ -35,4 +35,8 @@ public class ProductService {
         return productRepo.findAll();
 
     }
+
+    public void deleteProductByProductName(String productName) {
+        productRepo.deleteProductByProductName(productName);
+    }
 }

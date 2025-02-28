@@ -13,6 +13,9 @@ import java.util.List;
 @Repository
 public interface ProductRepo extends JpaRepository<Product,Long> {
 
+    @Modifying
+    @Transactional
+    @Query( "DELETE  FROM Product p WHERE p.productName = :productName ")
 
-
+    void deleteProductByProductName(String productName);
 }

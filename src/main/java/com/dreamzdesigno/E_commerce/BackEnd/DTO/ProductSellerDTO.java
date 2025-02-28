@@ -7,6 +7,7 @@ public class ProductSellerDTO {
     private Long productCost;
     private String sellerName;
     private String sellerLocation;
+
     public String getSellerLocation() {
         return sellerLocation;
     }
@@ -14,7 +15,6 @@ public class ProductSellerDTO {
     public void setSellerLocation(String sellerLocation) {
         this.sellerLocation = sellerLocation;
     }
-
 
 
     private double discountOffered;

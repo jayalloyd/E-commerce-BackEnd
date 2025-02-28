@@ -36,7 +36,11 @@ public class ProductController {
     }
 
 
-
+    @DeleteMapping("delete")
+    public ResponseEntity<Product> deleteProduct(@RequestBody Product product){
+      productService.deleteProductByProductName(product.getProductName());
+      return ResponseEntity.noContent().build();
+    }
 
 
 
