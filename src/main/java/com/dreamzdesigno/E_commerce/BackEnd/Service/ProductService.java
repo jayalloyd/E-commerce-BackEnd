@@ -20,15 +20,19 @@ public class ProductService {
     @Autowired
     private ModelMapper modelMapper;
 
-
-    public Product createListing(ProductSellerDTO productSellerDTO) {
-        Product product = new Product();
-        product = modelMapper.map(productSellerDTO, Product.class);
-        return productRepo.save(product);
-
-
-    }
-
+//
+//    public Product createListing(ProductSellerDTO productSellerDTO) {
+//        Product product = new Product();
+//        product = modelMapper.map(productSellerDTO, Product.class);
+//        return productRepo.save(product);
+//
+//
+//    }
+public Product createListing(ProductSellerDTO productSellerDTO) {
+    System.out.println("📌 Inside ProductService.createListing");
+    Product product = modelMapper.map(productSellerDTO, Product.class);
+    return productRepo.save(product);
+}
 
     public List<Product> getAllProducts() {
 
