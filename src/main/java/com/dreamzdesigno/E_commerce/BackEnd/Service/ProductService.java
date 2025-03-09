@@ -29,7 +29,7 @@ public class ProductService {
 //
 //    }
 public Product createListing(ProductSellerDTO productSellerDTO) {
-    System.out.println("📌 Inside ProductService.createListing");
+    System.out.println(" Inside ProductService.createListing");
     Product product = modelMapper.map(productSellerDTO, Product.class);
     return productRepo.save(product);
 }
